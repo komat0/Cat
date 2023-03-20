@@ -1,60 +1,59 @@
 
-public class Cat
-{
+public class Cat {
     private double originWeight;
     private double weight;
-
     private double minWeight;
     private double maxWeight;
+    private double eatenAmount = 0;
 
-    public Cat()
-    {
+    public Cat() {
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
         minWeight = 1000.0;
         maxWeight = 9000.0;
-
     }
 
-    public void meow()
-    {
+    public void meow() {
         weight = weight - 1000;
         System.out.println("Meow");
     }
 
-    public void feed(Double amount)
-    {
+    public void feed(Double amount) {
+        eatenAmount = eatenAmount + amount;
         weight = weight + amount;
     }
 
-    public void drink(Double amount)
-    {
+    public void drink(Double amount) {
         weight = weight + amount;
     }
 
-    public Double getWeight()
-    {
+    public Double getWeight() {
         return weight;
     }
 
-    public Double getMaxWeight()
-    {
+    public Double getMaxWeight() {
         return maxWeight;
     }
 
-    public String getStatus()
-    {
-        if(weight < minWeight) {
+    public String getStatus() {
+        if (weight < minWeight) {
             return "Dead";
-        }
-        else if(weight > maxWeight) {
+        } else if (weight > maxWeight) {
             return "Exploded";
-        }
-        else if(weight > originWeight) {
+        } else if (weight > originWeight) {
             return "Sleeping";
-        }
-        else {
+        } else {
             return "Playing";
         }
+    }
+
+    public void getEatenAmount() {
+        System.out.println(eatenAmount);
+    }
+
+    public double pee() {
+        weight = weight - 10;
+        System.out.println("Животное сходило в лоток и потеряло 10 в весе, вес стал " + weight);
+        return weight;
     }
 }

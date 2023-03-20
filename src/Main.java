@@ -20,6 +20,7 @@ public class Main {
             System.out.println("Васю покормили");
         }
         System.out.println("Вася " + vasya.getStatus());
+        vasya.getEatenAmount();
 
         System.out.println("Тимоха " + timokha.getStatus());
 
@@ -28,6 +29,9 @@ public class Main {
         }
         System.out.println("Тимоха " + timokha.getStatus());
 
+        System.out.println(agnus.getWeight());
+        agnus.pee();
+        System.out.println(agnus.getWeight());
 
     }
 }
