@@ -9,38 +9,37 @@ public class Main {
         Cat agnus = new Cat();
 
 
-        System.out.println(marusya.getStatus());
-        System.out.println(vasya.getStatus());
-        System.out.println(barsik.getStatus());
-        System.out.println(timokha.getStatus());
-        System.out.println(agnus.getStatus());
+        System.out.println(marusya.getCatStatus());
+        System.out.println(vasya.getCatStatus());
+        System.out.println(barsik.getCatStatus());
+        System.out.println(timokha.getCatStatus());
+        System.out.println(agnus.getCatStatus());
 
         Cat.getCatCounter();
 
         while (vasya.getWeight() <= vasya.getMaxWeight()) {
             vasya.feed(1000.0);
-            System.out.println("Васю покормили");
         }
 
-        System.out.println("Вася " + vasya.getStatus());
+        System.out.println("Вася " + vasya.getCatStatus());
 
         vasya.getEatenAmount();
 
         Cat.getCatCounter();
 
-        System.out.println("Тимоха " + timokha.getStatus());
+        System.out.println("Тимоха " + timokha.getCatStatus());
 
-        while (!Objects.equals(timokha.getStatus(), "Dead")) {
+        while (!Objects.equals(timokha.getCatStatus(), "Dead")) {
             timokha.meow();
         }
-        System.out.println("Тимоха " + timokha.getStatus());
+        System.out.println("Тимоха " + timokha.getCatStatus());
 
 
-        System.out.println(marusya.getStatus());
-        System.out.println(vasya.getStatus());
-        System.out.println(barsik.getStatus());
-        System.out.println(timokha.getStatus());
-        System.out.println(agnus.getStatus());
+        System.out.println(marusya.getCatStatus());
+        System.out.println(vasya.getCatStatus());
+        System.out.println(barsik.getCatStatus());
+        System.out.println(timokha.getCatStatus());
+        System.out.println(agnus.getCatStatus());
 
         Cat.getCatCounter();
 
