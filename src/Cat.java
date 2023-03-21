@@ -5,12 +5,14 @@ public class Cat {
     private double minWeight;
     private double maxWeight;
     private double eatenAmount = 0;
+    private static int catCounter = 0;
 
     public Cat() {
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
         minWeight = 1000.0;
         maxWeight = 9000.0;
+        catCounter++;
     }
 
     public void meow() {
@@ -45,6 +47,10 @@ public class Cat {
         } else {
             return "Playing";
         }
+    }
+
+    public static void getCatCounter() {
+        System.out.println("Всего кошек: " + catCounter);
     }
 
     public void getEatenAmount() {

@@ -10,17 +10,23 @@ public class Main {
 
 
         System.out.println(marusya.getStatus());
-        System.out.println(marusya.getWeight());
-        System.out.println(barsik.getWeight());
-        System.out.println(timokha.getWeight());
+        System.out.println(vasya.getStatus());
+        System.out.println(barsik.getStatus());
+        System.out.println(timokha.getStatus());
+        System.out.println(agnus.getStatus());
 
+        Cat.getCatCounter();
 
         while (vasya.getWeight() <= vasya.getMaxWeight()) {
             vasya.feed(1000.0);
             System.out.println("Васю покормили");
         }
+
         System.out.println("Вася " + vasya.getStatus());
+
         vasya.getEatenAmount();
+
+        Cat.getCatCounter();
 
         System.out.println("Тимоха " + timokha.getStatus());
 
@@ -28,6 +34,15 @@ public class Main {
             timokha.meow();
         }
         System.out.println("Тимоха " + timokha.getStatus());
+
+
+        System.out.println(marusya.getStatus());
+        System.out.println(vasya.getStatus());
+        System.out.println(barsik.getStatus());
+        System.out.println(timokha.getStatus());
+        System.out.println(agnus.getStatus());
+
+        Cat.getCatCounter();
 
         System.out.println(agnus.getWeight());
         agnus.pee();
