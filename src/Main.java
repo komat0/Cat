@@ -10,10 +10,6 @@ public class Main {
 
 
         System.out.println(marusya.getCatStatus());
-        System.out.println(vasya.getCatStatus());
-        System.out.println(barsik.getCatStatus());
-        System.out.println(timokha.getCatStatus());
-        System.out.println(agnus.getCatStatus());
 
         Cat.getCatCounter();
 
@@ -47,5 +43,7 @@ public class Main {
         agnus.pee();
         System.out.println(agnus.getWeight());
 
+        marusya.setCatColor(Colors.RED);
+        marusya.getCatColor();
     }
 }

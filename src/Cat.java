@@ -5,6 +5,9 @@ public class Cat {
     private final double maxWeight;
     private double eatenAmount;
     private static int catCounter;
+    private static final int eyes = 2;
+    private static final int legs = 4;
+    private String catColor;
 
     public Cat() {
         weight = 1500.0 + 3000.0 * Math.random();
@@ -32,41 +35,49 @@ public class Cat {
         }
     }
 
-        public void drink (Double amount){
-            weight = weight + amount;
-        }
+    public void drink(Double amount) {
+        weight = weight + amount;
+    }
 
-        public Double getWeight () {
-            return weight;
-        }
+    public Double getWeight() {
+        return weight;
+    }
 
-        public Double getMaxWeight () {
-            return maxWeight;
-        }
+    public Double getMaxWeight() {
+        return maxWeight;
+    }
 
-        public String getCatStatus () {
-            if (weight <= minWeight) {
-                return "Dead";
-            } else if (weight >= maxWeight) {
-                return "Exploded";
-            } else if (weight >= originWeight) {
-                return "Sleeping";
-            } else {
-                return "Playing";
-            }
-        }
-
-        public static void getCatCounter () {
-            System.out.println("Всего кошек: " + catCounter);
-        }
-
-        public void getEatenAmount () {
-            System.out.println(eatenAmount);
-        }
-
-        public double pee () {
-            weight = weight - 10;
-            System.out.println("Животное сходило в лоток и потеряло 10 в весе, вес стал " + weight);
-            return weight;
+    public String getCatStatus() {
+        if (weight <= minWeight) {
+            return "Dead";
+        } else if (weight >= maxWeight) {
+            return "Exploded";
+        } else if (weight >= originWeight) {
+            return "Sleeping";
+        } else {
+            return "Playing";
         }
     }
+
+    public static void getCatCounter() {
+        System.out.println("Всего кошек: " + catCounter);
+    }
+
+    public void getEatenAmount() {
+        System.out.println(eatenAmount);
+    }
+
+    public double pee() {
+        weight = weight - 10;
+        System.out.println("Животное сходило в лоток и потеряло 10 в весе, вес стал " + weight);
+        return weight;
+    }
+
+    public void setCatColor(Colors color) {
+        catColor = String.valueOf(color);
+    }
+
+    public void getCatColor() {
+        System.out.println(catColor);
+    }
+}
