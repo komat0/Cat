@@ -1,8 +1,9 @@
 public class Cat {
-    private final double originWeight;
+    private String name;
+    private double originWeight;
     private double weight;
-    private final double minWeight;
-    private final double maxWeight;
+    private final double minWeight = 1000.0;
+    private final double maxWeight = 9000.0;
     private double eatenAmount;
     private static int catCounter;
     private static final int eyes = 2;
@@ -12,13 +13,16 @@ public class Cat {
     public Cat() {
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
-        minWeight = 1000.0;
-        maxWeight = 9000.0;
         catCounter++;
     }
 
+    public Cat(int weight) {
+        this();
+        this.weight = weight;
+    }
+
     public void meow() {
-        weight = weight - 1000;
+        this.weight = weight - 1000;
         System.out.println("Котик проорал Meow и потерял в весе 1000");
         if (weight <= minWeight) {
             System.out.println("Котик заорал себя до смерти");

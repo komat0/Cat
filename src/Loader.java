@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Main {
+public class Loader {
     public static void main(String[] args) {
         Cat marusya = new Cat();
         Cat vasya = new Cat();
@@ -45,5 +45,19 @@ public class Main {
 
         marusya.setCatColor(Colors.RED);
         marusya.getCatColor();
+
+        Cat cat1 = Loader.getKitten();
+        Cat cat2 = Loader.getKitten();
+        Cat cat3 = Loader.getKitten();
+
+        System.out.println(cat1.getCatStatus());
+        cat2.pee();
+        cat3.meow();
+
     }
+
+    private static Cat getKitten(){
+        return new Cat(1100);
+    }
+
 }
