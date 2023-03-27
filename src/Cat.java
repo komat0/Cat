@@ -4,11 +4,11 @@ public class Cat {
     private double weight;
     private final double minWeight = 1000.0;
     private final double maxWeight = 9000.0;
-    private double eatenAmount;
-    private static int catCounter;
     private static final int eyes = 2;
     private static final int legs = 4;
     private String catColor;
+    private double eatenAmount;
+    private static int catCounter;
 
     public Cat() {
         weight = 1500.0 + 3000.0 * Math.random();
@@ -19,6 +19,14 @@ public class Cat {
     public Cat(int weight) {
         this();
         this.weight = weight;
+        catCounter++;
+    }
+
+    public Cat(double originWeight, Colors colors, String name) {
+        this.weight = originWeight;
+        this.originWeight = originWeight;
+        this.catColor = String.valueOf(colors);
+        catCounter++;
     }
 
     public void meow() {
@@ -41,14 +49,6 @@ public class Cat {
 
     public void drink(Double amount) {
         weight = weight + amount;
-    }
-
-    public Double getWeight() {
-        return weight;
-    }
-
-    public Double getMaxWeight() {
-        return maxWeight;
     }
 
     public String getCatStatus() {
@@ -77,11 +77,39 @@ public class Cat {
         return weight;
     }
 
-    public void setCatColor(Colors color) {
-        catColor = String.valueOf(color);
-    }
-
     public void getCatColor() {
         System.out.println(catColor);
+    }
+
+    public double getOriginWeight() {
+        return originWeight;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public double getMinWeight() {
+        return minWeight;
+    }
+
+    public double getMaxWeight() {
+        return maxWeight;
+    }
+
+    public int getEyes() {
+        return eyes;
+    }
+
+    public int getLegs() {
+        return legs;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public void setCatColor(Colors color) {
+        this.catColor = String.valueOf(color);
     }
 }
