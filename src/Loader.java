@@ -45,6 +45,8 @@ public class Loader {
 
         marusya.setCatColor(Colors.RED);
         marusya.getCatColor();
+        timokha.setCatColor(Colors.BLACK);
+        timokha.getCatColor();
 
         Cat cat1 = Loader.getKitten();
         Cat cat2 = Loader.getKitten();
